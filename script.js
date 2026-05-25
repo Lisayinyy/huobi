@@ -636,7 +636,7 @@
           revealIO.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -5% 0px' });
     revealEls.forEach(el => revealIO.observe(el));
 
     const eraBlocks = $$('.era-block');
