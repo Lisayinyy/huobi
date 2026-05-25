@@ -852,18 +852,28 @@ body[data-theme="dark"] .paper-noise { mix-blend-mode: screen; opacity: .4; }
   display: inline-block;
 }
 
-.hotspot { cursor: pointer; transform-origin: center; transition: transform .2s; }
-.hotspot:hover { transform: scale(1.4); }
-.hotspot circle.hot-core { fill: var(--vermillion); }
+.hotspot { cursor: pointer; }
+.hotspot circle.hot-dot {
+  fill: var(--vermillion);
+  transition: r .2s ease, fill .2s ease;
+}
 .hotspot circle.hot-pulse {
   fill: var(--vermillion); opacity: .35;
   animation: hotPulse 2.2s ease-out infinite;
   transform-origin: center;
+  pointer-events: none;
 }
-.hotspot.is-active circle.hot-core { fill: var(--gold); }
+.hotspot:hover circle.hot-dot { r: 1.7; fill: var(--gold); }
+.hotspot.is-active circle.hot-dot { r: 1.7; fill: var(--gold); }
 .hotspot text.hot-label {
   font-family: 'Noto Serif SC', serif; font-size: 2.2px;
   fill: var(--ink-soft); opacity: .8; font-weight: 500;
+  pointer-events: none;
+  transition: opacity .2s ease, fill .2s ease, font-weight .2s ease;
+}
+.hotspot:hover text.hot-label,
+.hotspot.is-active text.hot-label {
+  opacity: 1; font-weight: 700; fill: var(--ink);
 }
 @keyframes hotPulse {
   0% { opacity: .55; r: 1.2; }
