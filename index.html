@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="中国钱币史 · 致阿麽的一封信 — 从贝币到数字人民币，记录中华民族三千年的货币记忆" />
+  <title>中国钱币史 · 致阿麽的一封信</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=ZCOOL+XiaoWei&family=ZCOOL+QingKe+HuangYou&family=Liu+Jian+Mao+Cao&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-theme="day">
+
+  <!-- ========== 卷轴展开加载 ========== -->
+  <div class="scroll-loader" id="scroll-loader" aria-hidden="true">
+    <div class="scroll-rod scroll-rod-top"></div>
+    <div class="scroll-paper">
+      <div class="scroll-inner">
+        <div class="loader-stamp">壹</div>
+        <p class="loader-text">卷　轴　徐　徐　展　开</p>
+      </div>
+    </div>
+    <div class="scroll-rod scroll-rod-bottom"></div>
+  </div>
+
+  <!-- ========== 顶部纽 ========== -->
+  <header class="masthead" id="masthead">
+    <div class="masthead-mark">
+      <span class="zhuan">钱</span>
+      <span class="seal-corner">史</span>
+    </div>
+    <nav class="masthead-nav">
+      <a href="#chapter-letter" class="masthead-link">序</a>
+      <a href="#chapter-timeline" class="masthead-link">代</a>
+      <a href="#chapter-map" class="masthead-link">域</a>
+      <a href="#chapter-stories" class="masthead-link">闲</a>
+      <a href="#chapter-letter-end" class="masthead-link">跋</a>
+    </nav>
+    <div class="masthead-tools">
+      <button class="ghost-btn" id="search-toggle" aria-label="搜索钱币">寻</button>
+      <button class="ghost-btn" id="compare-toggle" aria-label="对比抽屉">对</button>
+      <button class="ghost-btn" id="theme-toggle" aria-label="昼夜">夜</button>
+    </div>
+  </header>
+
+  <!-- ========== 序 · Hero ========== -->
+  <section class="hero" id="chapter-hero">
+    <div class="hero-stage">
+      <div class="hero-bg-grain"></div>
+      <div class="hero-bg-wash"></div>
+
+      <div class="hero-title-block">
+        <p class="hero-eyebrow">A Letter to Grandma · 致阿麽</p>
+        <h1 class="hero-title">
+          <span class="ht-char" style="--d:0s">中</span>
+          <span class="ht-char" style="--d:.08s">国</span>
+          <span class="ht-char" style="--d:.16s">钱</span>
+          <span class="ht-char" style="--d:.24s">币</span>
+          <span class="ht-char" style="--d:.32s">史</span>
+        </h1>
+        <div class="hero-subtitle">
+          <span class="brush-line"></span>
+          <p>叁仟年・贝刀布泉钞银纸</p>
+          <span class="brush-line"></span>
+        </div>
+        <p class="hero-desc">
+          这是写给阿麽的一本小书。<br/>
+          您一定还记得，那枚压在席底的银元；<br/>
+          那一吊穿在红绳上的铜钱；<br/>
+          那张爸爸第一次发工资递给您的"大团结"。
+        </p>
+        <div class="hero-actions">
+          <a href="#chapter-letter" class="cta-button">
+            <span class="cta-ink"></span>
+            <span class="cta-text">翻开第一页　&nbsp;➤</span>
+          </a>
+          <a href="#chapter-timeline" class="ghost-link">或径入年表 →</a>
+        </div>
+      </div>
+
+      <div class="hero-coin-cluster" aria-hidden="true">
+        <svg class="hero-coin coin-a" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2"/><rect x="38" y="38" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"/><text x="50" y="32" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">乾</text><text x="50" y="76" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">隆</text><text x="32" y="55" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">通</text><text x="68" y="55" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">宝</text></svg>
+        <svg class="hero-coin coin-b" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2"/><rect x="38" y="38" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"/><text x="50" y="32" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">开</text><text x="50" y="76" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">元</text><text x="32" y="55" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">通</text><text x="68" y="55" text-anchor="middle" font-family="Ma Shan Zheng" font-size="10" fill="currentColor">宝</text></svg>
+        <svg class="hero-coin coin-c" viewBox="0 0 100 100"><path d="M50 4 Q70 30 70 50 Q70 90 50 96 Q30 90 30 50 Q30 30 50 4 Z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="50" y1="14" x2="50" y2="86" stroke="currentColor" stroke-width="1"/></svg>
+        <svg class="hero-coin coin-d" viewBox="0 0 100 100"><path d="M20 78 Q20 60 30 56 L72 22 Q80 18 84 24 Q88 30 84 36 L48 70 Q42 76 32 80 Q22 84 20 78 Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="80" cy="26" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+
+      <div class="hero-seal">
+        <div class="seal-ring">
+          <span>致</span><span>阿</span><span>麽</span><span>·</span><span>A</span><span>·</span><span>L</span><span>·</span><span>T</span><span>·</span><span>G</span><span>·</span>
+        </div>
+        <div class="seal-center">印</div>
+      </div>
+
+      <div class="scroll-hint">
+        <span>下　卷</span>
+        <span class="scroll-hint-arrow">⇣</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 一 · 写给阿麽的信 ========== -->
+  <section class="chapter chapter-letter" id="chapter-letter">
+    <div class="paper-card">
+      <div class="paper-noise"></div>
+      <div class="paper-fold paper-fold-tl"></div>
+      <div class="paper-fold paper-fold-br"></div>
+
+      <div class="chapter-tag">
+        <span class="tag-num">壹</span>
+        <span class="tag-label">第一封信</span>
+      </div>
+
+      <h2 class="chapter-h-handwritten">阿麽　膝下：</h2>
+
+      <div class="letter-body">
+        <p>
+          台风季又到了。后院那棵阿公栽的杨桃树，今年还结了好多。<br/>
+          我把树下那只生锈的铁皮饼干盒打开了——您还记得吗？里面装的全是钱。
+        </p>
+        <p>
+          有汉朝的<span class="ink-highlight">五铢</span>，唐朝的<span class="ink-highlight">开元通宝</span>，<br/>
+          有民国的<span class="ink-highlight">袁大头</span>，新中国第一套<span class="ink-highlight">人民币</span>上的火车头还冒着烟。<br/>
+          有您出嫁时戴的银镯，<br/>
+          也有阿公出南洋寄回来的、印着英文的银元。
+        </p>
+        <p>
+          这些都不是值钱的古董，但每一枚都被您仔细擦过。<br/>
+          您说"钱"这个字，左边是"金"，右边是两支"戈"——<br/>
+          它本是兵器，也是希望，也是命。
+        </p>
+        <p>
+          所以这本小书，我就编给您。<br/>
+          也编给那些被我们遗忘了名字的——<br/>
+          <span class="ink-highlight-strong">贝、刀、布、半两、五铢、开元、交子、宝钞、银元、法币、人民币……</span>
+        </p>
+        <p class="letter-signoff">
+          愿您在那边，仍能<br/>
+          摸到铜钱凉凉的圆。
+        </p>
+        <p class="letter-sign">— 您　不孝的　孙</p>
+      </div>
+
+      <div class="letter-meta-row">
+        <span class="meta-pill">3000+ 年</span>
+        <span class="meta-pill">14 朝代</span>
+        <span class="meta-pill">40+ 种货币</span>
+        <span class="meta-pill">13 大区域</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 二 · 年表卷轴 ========== -->
+  <section class="chapter chapter-timeline" id="chapter-timeline">
+    <div class="chapter-head">
+      <div class="chapter-tag">
+        <span class="tag-num">贰</span>
+        <span class="tag-label">第二封信 · 年表</span>
+      </div>
+      <h2 class="chapter-h">钱币年表</h2>
+      <p class="chapter-deck">从贝币到数字人民币，沿着一条三千年的细线，把每个朝代留下的钱拈起来看看。</p>
+    </div>
+
+    <div class="era-rail-wrap">
+      <div class="era-rail-inner" id="era-rail"><!-- JS render --></div>
+    </div>
+
+    <div class="era-controls">
+      <div class="era-filter-bar">
+        <label class="era-filter-label">材质：</label>
+        <button class="filter-chip is-active" data-mat="all">不限</button>
+        <button class="filter-chip" data-mat="贝">贝</button>
+        <button class="filter-chip" data-mat="青铜">铜</button>
+        <button class="filter-chip" data-mat="铁">铁</button>
+        <button class="filter-chip" data-mat="银">银</button>
+        <button class="filter-chip" data-mat="金">金</button>
+        <button class="filter-chip" data-mat="纸">纸</button>
+        <button class="filter-chip" data-mat="数字">码</button>
+      </div>
+      <p class="era-counter"><span id="coin-count">0</span> 枚钱币在档</p>
+    </div>
+
+    <div class="era-stage" id="era-stage"><!-- JS render eras --></div>
+  </section>
+
+  <!-- ========== 三 · 域 · 地图 ========== -->
+  <section class="chapter chapter-map" id="chapter-map">
+    <div class="chapter-head">
+      <div class="chapter-tag">
+        <span class="tag-num">叁</span>
+        <span class="tag-label">第三封信 · 地理</span>
+      </div>
+      <h2 class="chapter-h">九州钱地图</h2>
+      <p class="chapter-deck">同一时间，齐地用刀、楚地用蚁鼻、三晋铸布——钱币是流动的地理。</p>
+    </div>
+
+    <div class="map-wrap">
+      <div class="map-canvas">
+        <svg viewBox="0 0 100 80" class="map-svg" id="map-svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <pattern id="paperGrain" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+              <rect width="4" height="4" fill="none"/>
+              <circle cx="1" cy="1" r="0.2" fill="currentColor" opacity="0.06"/>
+              <circle cx="3" cy="3" r="0.15" fill="currentColor" opacity="0.04"/>
+            </pattern>
+          </defs>
+          <!-- 极简中国轮廓 (stylized hand-drawn) -->
+          <path id="china-outline" d="
+            M 15 38 Q 12 30 18 24 Q 25 18 32 16 Q 38 12 44 14 Q 52 10 60 12 Q 70 10 78 16 Q 86 22 88 30 Q 92 36 90 44 Q 90 52 84 58 Q 78 64 72 66 Q 64 70 56 70 Q 48 72 40 70 Q 32 70 26 66 Q 18 60 14 52 Q 12 44 15 38 Z"
+            fill="url(#paperGrain)" stroke="currentColor" stroke-width="0.4" stroke-linejoin="round" opacity="0.85"/>
+          <!-- 长江/黄河 写意 -->
+          <path d="M 18 32 Q 35 36 50 34 Q 65 32 82 36" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.35" stroke-dasharray="0.6 0.4"/>
+          <path d="M 22 48 Q 38 52 56 50 Q 72 48 86 52" stroke="currentColor" stroke-width="0.3" fill="none" opacity="0.35" stroke-dasharray="0.6 0.4"/>
+          <g id="map-hotspots"><!-- JS injects --></g>
+        </svg>
+        <div class="map-legend">
+          <span class="legend-dot"></span> 点击区域，看那里曾流通过的钱
+        </div>
+      </div>
+
+      <aside class="map-panel" id="map-panel">
+        <p class="map-panel-eyebrow">区域档案</p>
+        <h3 class="map-panel-title" id="map-region-name">请　点　选</h3>
+        <p class="map-panel-history" id="map-region-history">在地图上拨一拨那些朱印，听听各地的钱币故事。</p>
+        <div class="map-panel-coins" id="map-region-coins"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========== 四 · 闲话 ========== -->
+  <section class="chapter chapter-stories" id="chapter-stories">
+    <div class="chapter-head">
+      <div class="chapter-tag">
+        <span class="tag-num">肆</span>
+        <span class="tag-label">第四封信 · 闲话</span>
+      </div>
+      <h2 class="chapter-h">阿麽，您可知道？</h2>
+      <p class="chapter-deck">钱币的边角故事——比正史更软，比闲话更暖。</p>
+    </div>
+
+    <div class="stories-deck" id="stories-deck"><!-- JS render --></div>
+  </section>
+
+  <!-- ========== 五 · 跋 ========== -->
+  <section class="chapter chapter-letter-end" id="chapter-letter-end">
+    <div class="paper-card paper-card-end">
+      <div class="paper-noise"></div>
+
+      <div class="chapter-tag">
+        <span class="tag-num">伍</span>
+        <span class="tag-label">第五封信 · 跋</span>
+      </div>
+
+      <h2 class="chapter-h-handwritten">阿麽，</h2>
+      <div class="letter-body">
+        <p>
+          我把饼干盒重新埋回杨桃树下了。<br/>
+          这次旁边多了一张小纸条，写着这本小书的网址，<br/>
+          等以后的孩子挖出来，<br/>
+          他们也能知道——
+        </p>
+        <p class="letter-poetic">
+          ——铜钱<span class="ink-highlight">穿绳</span>是要响的，<br/>
+          ——银元<span class="ink-highlight">吹气</span>是要嗡的，<br/>
+          ——粮票<span class="ink-highlight">折角</span>是要齐的，<br/>
+          ——纸币<span class="ink-highlight">摸边</span>是要新的，<br/>
+          ——而手机一扫，<span class="ink-highlight-strong">轻轻一响</span>，钱就到了。
+        </p>
+        <p>
+          钱在变，可"想给您"这件事，从来没变。
+        </p>
+        <p class="letter-signoff">
+          下次回乡，<br/>
+          我去坟前烧一刀新崭崭的纸钱给您。<br/>
+          您莫嫌少。
+        </p>
+        <p class="letter-sign">敬启 · 二〇二六年初夏</p>
+      </div>
+
+      <div class="end-seal-row">
+        <div class="end-stamp end-stamp-red">敬上</div>
+        <div class="end-stamp end-stamp-jade">收讫</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="footer">
+    <div class="footer-line">数据辑自：《史记·平准书》《汉书·食货志》《宋史·食货志》《元史·食货志》《明史·食货志》《清史稿·食货志》《中国货币史》（彭信威）等</div>
+    <div class="footer-line footer-sub">编 · 一个想念阿麽的孩子　·　戊辰年仲夏　·　仅供研究与缅怀</div>
+  </footer>
+
+  <!-- ========== 钱币详情遮罩 ========== -->
+  <div class="modal-shroud" id="modal-shroud" aria-hidden="true">
+    <div class="modal-paper" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button class="modal-close" id="modal-close" aria-label="合上">合</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <div class="modal-coin-stage" id="modal-coin-stage"></div>
+          <div class="modal-stamp-row">
+            <span class="modal-stamp" id="modal-era-stamp">—</span>
+            <span class="modal-stamp jade" id="modal-material-stamp">—</span>
+          </div>
+        </div>
+        <div class="modal-right">
+          <p class="modal-eyebrow" id="modal-eyebrow">货 币 详 录</p>
+          <h3 class="modal-name" id="modal-name">—</h3>
+          <p class="modal-pinyin" id="modal-pinyin">—</p>
+          <p class="modal-years" id="modal-years">—</p>
+
+          <h4 class="modal-section-h">沿革</h4>
+          <p class="modal-desc" id="modal-desc">—</p>
+
+          <h4 class="modal-section-h">意义</h4>
+          <p class="modal-sig" id="modal-sig">—</p>
+
+          <h4 class="modal-section-h">趣识</h4>
+          <ul class="modal-facts" id="modal-facts"></ul>
+
+          <div class="modal-meta-grid" id="modal-meta-grid"></div>
+
+          <div class="modal-actions">
+            <button class="cta-button cta-small" id="modal-add-compare">加入对比 ＋</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 搜索遮罩 ========== -->
+  <div class="search-shroud" id="search-shroud" aria-hidden="true">
+    <div class="search-paper">
+      <button class="modal-close" id="search-close" aria-label="关闭">合</button>
+      <p class="modal-eyebrow">检索钱币</p>
+      <input type="text" id="search-input" class="search-input" placeholder="输入钱币名 / 朝代 / 材质…" autocomplete="off"/>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <!-- ========== 对比抽屉 ========== -->
+  <aside class="compare-drawer" id="compare-drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <h3>钱币对比 <span class="drawer-count" id="drawer-count">0/3</span></h3>
+      <button class="ghost-btn" id="drawer-close">合</button>
+    </div>
+    <div class="drawer-body" id="drawer-body">
+      <p class="drawer-empty">点开任一钱币卡，再按"加入对比"即可在此横向比对。最多 3 枚。</p>
+    </div>
+    <div class="drawer-foot">
+      <button class="ghost-btn" id="drawer-clear">清空</button>
+    </div>
+  </aside>
+
+  <!-- ========== 浮印 ========== -->
+  <div class="float-seal float-seal-tl" aria-hidden="true">阿麽手泽</div>
+  <div class="float-seal float-seal-br" aria-hidden="true">乙巳・夏</div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
