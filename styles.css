@@ -1089,7 +1089,7 @@ body[data-theme="dark"] .paper-noise { mix-blend-mode: screen; opacity: .4; }
   transform: translateY(20px);
   transition: opacity .8s ease, transform .8s ease;
 }
-.chapter.is-visible, .paper-card.is-visible, .coin-card.is-visible, .story-card.is-visible, .era-block.is-visible {
+.chapter.is-revealed, .paper-card.is-revealed, .coin-card.is-revealed, .story-card.is-revealed, .era-block.is-revealed {
   opacity: 1; transform: translateY(0);
 }
 #chapter-hero { opacity: 1; transform: none; } /* hero always visible */
