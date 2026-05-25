@@ -591,38 +591,85 @@ body[data-theme="dark"] .paper-noise { mix-blend-mode: screen; opacity: .4; }
   border-top: 1px solid var(--ink-faint);
 }
 .era-block-head {
-  display: flex; align-items: baseline; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px;
+  display: flex; align-items: flex-start; justify-content: flex-start;
+  flex-wrap: nowrap; gap: 20px;
   margin-bottom: 12px;
+}
+.era-block-icon {
+  flex: 0 0 auto;
+  font-size: 36px; line-height: 1;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--era-color, var(--ink-faint));
+  border-radius: 50%;
+  color: var(--era-color, var(--vermillion));
+}
+.era-block-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.era-block-count {
+  flex: 0 0 auto;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 2px;
+  padding: 10px 16px;
+  min-width: 84px;
+  background: var(--paper);
+  border: 1px solid var(--era-color, var(--ink-faint));
+  border-radius: 4px;
+}
+.era-count-num {
+  font-family: var(--f-num);
+  font-size: 28px; line-height: 1;
+  color: var(--era-color, var(--vermillion));
+  font-weight: 600;
+}
+.era-count-label {
+  font-family: var(--f-display);
+  font-size: 11px; letter-spacing: .25em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
 }
 .era-block-title {
   font-family: var(--f-display);
   font-size: clamp(28px, 4vw, 44px);
   color: var(--era-color, var(--ink));
   letter-spacing: .08em;
+  line-height: 1.2;
 }
-.era-block-pinyin { font-family: var(--f-display); font-size: 12px; letter-spacing: .35em; color: var(--ink-faint); text-transform: uppercase; margin-left: 8px; }
+.era-block-pinyin { font-family: var(--f-display); font-size: 12px; letter-spacing: .35em; color: var(--ink-faint); text-transform: uppercase; margin-left: 8px; display: inline-block; }
 .era-block-year {
   font-family: var(--f-num); font-size: 17px;
   color: var(--ink-soft);
   padding: 4px 10px;
   border-left: 3px solid var(--era-color, var(--vermillion));
+  align-self: flex-start;
 }
 .era-block-summary {
   font-family: var(--f-body); font-size: 16px; line-height: 1.9;
   color: var(--ink-soft);
   max-width: 720px;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 .era-block-quote {
   font-family: var(--f-hand); font-size: 19px;
   color: var(--era-color, var(--vermillion));
   padding: 6px 0 12px;
   border-bottom: 1px dashed var(--ink-faint);
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 .era-block-quote::before { content: "「"; opacity: .5; margin-right: 4px; }
 .era-block-quote::after { content: "」"; opacity: .5; margin-left: 4px; }
+
+@media (max-width: 720px) {
+  .era-block-head { flex-wrap: wrap; }
+  .era-block-icon { width: 48px; height: 48px; font-size: 28px; }
+  .era-block-count { min-width: 72px; padding: 8px 12px; }
+  .era-count-num { font-size: 22px; }
+}
 
 .coin-grid {
   display: grid;
